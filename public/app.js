@@ -77,8 +77,9 @@ async function createRoom() {
     `;
     document.querySelector(
         "#currentRoom"
-    ).innerHTML = `<span id="currentRoomMsg" class="text-center">You are the caller.<br />
-        Either share the QR code and the room ID to have others join you.<br />
+    ).innerHTML = `<span id="currentRoomMsg" class="text-center">You are the caller.<br /><br />
+        Either share the QR code with the room ID or click <a href="mailto:?subject=Video Conference Invitation&body=Link: https://videortc-dd42a.web.app/
+        Room ID: ${roomId}" target="_blank">here</a> to send an invitation by email.<br /><br />
         This room ID is <b>${roomRef.id}</b></span>`;
     // Code for creating a room above
 

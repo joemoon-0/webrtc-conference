@@ -97,15 +97,29 @@
                 </div>
             </div>
             <div class="row">
-                <div id="room-QR" class="col d-flex flex-row justify-content-end"></div>
-                <div class="col d-flex flex-row justify-content-start" id="currentRoom">
+                <div
+                    id="room-QR"
+                    class="col-4 d-flex flex-row justify-content-end"
+                ></div>
+                <div
+                    class="col d-flex flex-row justify-content-start"
+                    id="currentRoom"
+                ></div>
             </div>
-        </div>
 
-        <!-- Video Stream Displays -->
-        <div id="videos">
-            <video id="localVideo" muted autoplay playsinline></video>
-            <video id="remoteVideo" autoplay playsinline></video>
+            <!-- Video Stream Displays -->
+            <div class="row" id="videos">
+                <div class="col d-flex flex-row justify-content-center">
+                    <video id="localVideo" muted autoplay playsinline></video>
+                </div>
+                <div class="col d-flex flex-row justify-content-center">
+                    <video id="remoteVideo" autoplay playsinline></video>
+                </div>
+            </div>
+            <!-- <div id="videos"> -->
+            <!--     <video id="localVideo" muted autoplay playsinline></video> -->
+            <!--     <video id="remoteVideo" autoplay playsinline></video> -->
+            <!-- </div> -->
         </div>
 
         <div
