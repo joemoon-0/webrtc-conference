@@ -1,5 +1,6 @@
 mdc.ripple.MDCRipple.attachTo(document.querySelector(".mdc-button"));
 
+// Server configuration
 const configuration = {
     iceServers: [
         {
@@ -78,8 +79,7 @@ async function createRoom() {
     document.querySelector(
         "#currentRoom"
     ).innerHTML = `<span id="currentRoomMsg" class="text-center">You are the caller.<br /><br />
-        Either share the QR code with the room ID or click <a href="mailto:?subject=Video Conference Invitation&body=Link: https://videortc-dd42a.web.app/
-        Room ID: ${roomId}" target="_blank">here</a> to send an invitation by email.<br /><br />
+        Either share the QR code with the room ID or click <a href="mailto:?subject=Video Conference Invitation&body=You've been invited to join a conference call!%0ALink: https://videortc-dd42a.web.app/%0ARoom ID: ${roomId}" target="_blank">here</a> to send an invitation by email.<br /><br />
         This room ID is <b>${roomRef.id}</b></span>`;
     // Code for creating a room above
 
@@ -250,7 +250,8 @@ async function hangUp(e) {
     document.querySelector("#joinBtn").disabled = true;
     document.querySelector("#createBtn").disabled = true;
     document.querySelector("#hangupBtn").disabled = true;
-    document.querySelector("#currentRoom").innerText = "";
+    document.querySelector("#currentRoom").innerHTML = "";
+    document.querySelector("#room-QR").innerHTML = "";
 
     // Delete room on hangup
     if (roomId) {
@@ -297,5 +298,10 @@ function registerPeerConnectionListeners() {
         );
     });
 }
+
+// Checks status of feed and alters display
+const checkFeed = (sourceObject) => {
+    return (sourceObject == null ? "none" : "inline");
+};
 
 init();

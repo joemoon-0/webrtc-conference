@@ -7,12 +7,12 @@
         <link
             href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
             rel="stylesheet"
-        />
+            />
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
+            />
 
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/5.9.3/firebase-app.js"></script>
@@ -27,7 +27,7 @@
             rel="stylesheet"
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
-        />
+            />
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
     <body>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col"></div>
             </div>
-            <div class="row">
+            <div class="row" id="options-bar">
                 <div class="col d-flex justify-content-center">
                     <button
                         class="mdc-button mdc-button--raised"
@@ -116,10 +116,6 @@
                     <video id="remoteVideo" autoplay playsinline></video>
                 </div>
             </div>
-            <!-- <div id="videos"> -->
-            <!--     <video id="localVideo" muted autoplay playsinline></video> -->
-            <!--     <video id="remoteVideo" autoplay playsinline></video> -->
-            <!-- </div> -->
         </div>
 
         <div
@@ -142,11 +138,12 @@
                                 type="text"
                                 id="room-id"
                                 class="mdc-text-field__input"
+                                placeholder = "Room ID"
                             />
                             <label
                                 class="mdc-floating-label"
                                 for="my-text-field"
-                                >Room ID</label
+                                ></label
                             >
                             <div class="mdc-line-ripple"></div>
                         </div>
